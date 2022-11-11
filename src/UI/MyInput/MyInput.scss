@@ -1,0 +1,22 @@
+@import "../../styles/variables.scss";
+
+.myInput {
+    display: block;
+    width: 100%;
+    padding: 8px 20px;
+    border: none;
+    margin-bottom: 15px;
+    color: black;
+    font-size: 14px;
+    box-shadow: $boxShadow;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.myInput:focus {
+    outline: 1px solid rgba(0, 128, 128, 0.2);
+}
+
+.myInput:first-child {
+    margin-top: 20px;
+}

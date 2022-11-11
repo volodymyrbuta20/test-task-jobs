@@ -1,0 +1,152 @@
+@import "../../styles/variables.scss";
+@import "../../styles/titles";
+
+.singlejob {
+    &__wrapper {
+        padding: 60px 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    hr {
+        margin-top: 10px;
+        background: $textColor;
+        opacity: 0.13;
+    }
+
+    &__info {
+        max-width: 730px;
+    }
+
+    &__head {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__name {
+        max-width: 500px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: -0.75px;
+        color: $textColor;
+    }
+
+    &__amount {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.625px;
+        color: $textColor;
+    }
+
+    &__salary {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: $textColor;
+    }
+
+    &__date {
+        margin: 10px 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: rgba(56, 65, 93, 0.355988);
+    }
+
+    &__descr, &__subtitle {
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: $textColor;
+    }
+
+    &__subtitle {
+        margin: 7px 0;
+    }
+
+    &__compensation {
+        list-style-type:square;
+    }
+
+    &__compensation-item {
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: $textColor;
+    }
+
+    &__btns {
+        margin-top: 15px;
+    }
+
+    &__images {
+        margin-top: 25px;
+    }
+
+    &__img {
+        margin-right: 10px;
+        width: 209px;
+        height: 115px;
+        object-fit: cover;
+    }
+
+    &__map {
+        position: relative;
+        width: 402px;
+        height: 436px;
+        border-radius: 8px;
+        background-color: $textColor;
+    }
+
+    &__map-info {
+        position: absolute;
+        width: 280px;
+        top: 30px;
+        right: 60px;
+    }
+
+    &__map-name {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.625px;
+        color: #E7EAF0;
+    }
+
+    &__map-address {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: #E8EBF3;
+    }
+
+    &__map-address svg {
+        margin-right: 7px;
+    }
+
+    &__map-phone, &__map-mail {
+        margin-top: 7px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: #E8EBF3;
+    }
+}

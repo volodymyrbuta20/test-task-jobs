@@ -1,0 +1,103 @@
+@import "../../styles/variables.scss";
+
+.jobsListItem {
+    &__wrapper {
+        position: relative;
+        margin-bottom: 10px;
+        width: 100%;
+        min-height: 160px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 16px;
+        background-color: white;
+        box-shadow: $boxShadow;
+        border-radius: 8px;
+    }
+
+    &__block {
+        min-height: 120px;
+        display: flex;
+    }
+
+    &__image {
+        display: inline-block;
+        overflow: hidden;
+        margin-right: 25px;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__name, &__title {
+        max-width: 720px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.625px;
+        color: $textColor;
+    }
+
+    &__name {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    &__info:hover {
+        .jobsListItem__name, .jobsListItem__title {
+            transition: color 0.2s;
+            color: #9396a2;
+        }
+    }
+
+    &__address, &__place {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.23619px;
+        color: #878D9D;
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    &__rating {
+        margin-right: 30px;
+        align-self: center;
+    }
+
+    &__rating svg {
+        fill: #38415D;
+    }
+
+    &__data-favorite {
+        
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    &__data-favorite svg {
+        fill: #70778B;
+        width: 16px;
+        height: 20px;
+    }
+
+    &__data-posted {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.23619px;
+        color: #878D9D;
+    }
+}

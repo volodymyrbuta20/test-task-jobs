@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState, useEffect } from "react";
+import JobService from "./API/JobService";
+import JobFilter from "./components/JobFilter/JobFilter";
+import JobsList from "./components/JobsList/JobsList";
+import SingleJobPage from "./pages/SingleJobPage/SingleJobPage";
+
+import MySpinner from "./UI/MySpinner/MySpinner";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [jobs, setJobs] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        fetchJobs();
+    }, [])
+
+    const fetchJobs = async () => {
+        setIsLoading(true)
+        const jobs = await JobService.getAllJobs()
+        setJobs(jobs)
+        setIsLoading(false)
+    }
+
+    return (
+        <div className="App">
+            <JobFilter/>
+            {isLoading ? <MySpinner/> : <JobsList jobs={jobs}/>}
+            {/* <SingleJobPage/> */}
+        </div>
+    );
 }
 
 export default App;

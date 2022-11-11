@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+@import "../../styles/titles";
+
+.header {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__links {
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        background-color: inherit;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.5625px;
+        color: $textColor;
+        font-stretch: 100;
+        cursor: pointer;
+    }
+
+    &__btn svg {
+        fill: $textColor;
+        margin-right: 10px;
+    }
+}
+
