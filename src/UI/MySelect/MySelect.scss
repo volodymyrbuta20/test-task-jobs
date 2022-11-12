@@ -1,3 +1,29 @@
+@import "../../styles/variables";
+
+.custom-select {
+    &__control {
+        border: none !important;
+        max-width: 250px !important;
+        border-radius: 6px !important;
+        padding: 0 0 0 10px !important;
+        box-shadow: $boxShadow !important;
+        min-height: none !important;
+    }
+
+    &__menu {
+        max-width: 250px !important;
+        margin-top: 5px !important;
+    }
+
+    &__option--is-selected {
+        background-color: #03030342 !important;
+    }
+
+    &__option--is-focused {
+        background-color: #bbbbbb85 !important;
+    }
+}
+
 .select__container {
     display: inline-block;
     margin-bottom: 30px;

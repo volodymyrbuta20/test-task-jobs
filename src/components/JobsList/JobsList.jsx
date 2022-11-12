@@ -4,11 +4,13 @@ import "./JobsList.scss";
 const JobsList = ({jobs}) => {
     return (
         <div className="jobsList">
-            {jobs.map(job => (
+            {jobs.length ? 
+            jobs.map(job => (
                 <JobsListItem
                     key={job.id}
                     job={job}/>
-            ))}
+            )) :
+            <h2 className="title jobslist__title">There is no jobs found</h2>}
         </div>
     )
 }

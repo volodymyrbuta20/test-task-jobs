@@ -1,34 +1,20 @@
-
-import { useState, useEffect } from "react";
-import JobService from "./API/JobService";
-import JobFilter from "./components/JobFilter/JobFilter";
-import JobsList from "./components/JobsList/JobsList";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import MainPage from "./pages/MainPage/MainPage";
 import SingleJobPage from "./pages/SingleJobPage/SingleJobPage";
-
-import MySpinner from "./UI/MySpinner/MySpinner";
 
 function App() {
 
-    const [jobs, setJobs] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-
-    useEffect(() => {
-        fetchJobs();
-    }, [])
-
-    const fetchJobs = async () => {
-        setIsLoading(true)
-        const jobs = await JobService.getAllJobs()
-        setJobs(jobs)
-        setIsLoading(false)
-    }
-
     return (
-        <div className="App">
-            <JobFilter/>
-            {isLoading ? <MySpinner/> : <JobsList jobs={jobs}/>}
-            {/* <SingleJobPage/> */}
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <Routes>
+                    <Route path="/jobs" element={<MainPage/>}/>
+                    <Route path="/jobs/:jobId" element={<SingleJobPage/>}/>
+                    <Route path="*" element={<ErrorPage/>} />
+                </Routes>
+            </div>
+        </BrowserRouter>
     );
 }
 
