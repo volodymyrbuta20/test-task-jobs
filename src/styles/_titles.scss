@@ -25,3 +25,11 @@
         letter-spacing: -0.5625px;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .title {
+        &__mt85 {
+            margin-top: 40px;
+        }
+    }
+}

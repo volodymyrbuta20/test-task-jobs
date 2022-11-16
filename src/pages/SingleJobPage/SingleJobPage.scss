@@ -2,6 +2,7 @@
 
 .singlejob {
     &__wrapper {
+        position: relative;
         padding: 60px 80px;
         display: flex;
         justify-content: space-between;
@@ -100,8 +101,15 @@
         object-fit: cover;
     }
 
+    &__column-header {
+        display: none;
+    }
+
     &__map {
+        margin-left: 30px;
         position: relative;
+        display: flex;
+        flex-direction: column;
         width: 402px;
         height: 436px;
         border-radius: 8px;
@@ -109,10 +117,7 @@
     }
 
     &__map-info {
-        position: absolute;
-        width: 280px;
-        top: 30px;
-        right: 60px;
+        padding: 30px 60px;
     }
 
     &__map-name {
@@ -147,5 +152,125 @@
         line-height: 24px;
         letter-spacing: -0.5625px;
         color: #E8EBF3;
+    }
+
+    &__map-location {
+        width: 100%;
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .singlejob {
+        &__wrapper {
+            padding: 15px;
+        }
+
+        &__img {
+            width: 190px;
+            height: 110px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .singlejob {
+
+        &__header {
+            margin-right: 25px;
+        }
+        &__img {
+            width: 190px;
+            height: 110px;
+        }
+
+        &__map {
+            width: 355px;
+            height: 400px;
+        }
+
+        &__map-info {
+            padding: 20px 30px;
+        }
+
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .singlejob {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__column {
+            width: 100%;
+        }
+
+        &__column-header {
+            display: block;
+        }
+
+        &__map {
+            width: 400px;
+            margin: 50px auto;
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .singlejob {
+        &__map {
+            width: 360px;
+        }
+
+        &__images {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .singlejob {
+        &__wrapper {
+            padding: 0;
+        }
+
+        &__head {
+            flex-direction: column;
+        }
+
+        &__header {
+            margin: 0;
+        }
+
+        &__salary {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__title {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        &__compensation {
+            margin-left: 15px;
+        }
+
+        &__images {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        &__map {
+            width: 300px;
+            height: 350px;
+        }
     }
 }

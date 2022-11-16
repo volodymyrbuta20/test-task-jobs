@@ -6,7 +6,7 @@ const ErrorPage = () => {
         <div className="errorpage">
             <p className="title" style={{textAlign: "center"}}>This page doesn't exist</p>
             <ErrorMessage/>
-            <Link to="/jobs" className="btn btn__return">Back to main page</Link>
+            <Link to="/" className="btn btn__return">Back to main page</Link>
         </div>
     )
 }

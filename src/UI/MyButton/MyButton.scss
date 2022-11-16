@@ -80,3 +80,29 @@
         background: #3845645d;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .btn__return {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .btn__return {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .btn__employment, .btn__benefits {
+        width: 115px;
+        height: 35px;
+        padding: 0 5px;
+        border-radius: 4px;
+    }
+
+    .btn__apply-top {
+        display: none;
+    }
+}

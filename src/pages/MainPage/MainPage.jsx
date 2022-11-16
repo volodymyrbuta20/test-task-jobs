@@ -21,11 +21,12 @@ const MainPage = () => {
         fetchJobs();
     }, [])
 
+    const spinner = isLoading ? <MySpinner/> : <JobsList jobs={sortedAndSearchedJobs}/>
+
     return (
         <>
             <JobFilter filter={filter} setFilter={setFilter}/>
-            {isError && <ErrorMessage/>}
-            {isLoading ? <MySpinner/> : <JobsList jobs={sortedAndSearchedJobs}/>}
+            {isError ? <ErrorMessage/> : spinner}
         </>
     )
 }
