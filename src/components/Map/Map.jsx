@@ -19,7 +19,7 @@ export default function SimpleMap(props){
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <ReactComponent/>
+        <ReactComponent lat={props.location.lat} lng={props.location.long}/>
       </GoogleMapReact>
     </div>
   );
