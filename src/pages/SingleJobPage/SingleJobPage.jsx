@@ -8,9 +8,9 @@ import MySpinner from "../../UI/MySpinner/MySpinner";
 import ErrorMessage from "../../UI/ErrorMessage/ErrorMessage";
 import MyButton from "../../UI/MyButton/MyButton";
 import {FaMapMarkerAlt} from "react-icons/fa";
+import PostedDate from "../../utils/PostedDate";
 
 import "./SingleJobPage.scss";
-import PostedDate from "../../utils/PostedDate";
 
 const SingleJobPage = () => {
 
