@@ -1,4 +1,4 @@
-# [Deployed Link (https://vercel.com/volodymyrbuta20/test-task-jobs)]
+# [Deployed Link] (https://vercel.com/volodymyrbuta20/test-task-jobs)
 
 # Getting Started with Create React App
 
